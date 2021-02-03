@@ -1,0 +1,55 @@
+@import "styles/support/variables";
+
+.container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 19px;
+}
+
+.values {
+  flex: 1 1 auto;
+  max-width: 100%;
+  padding: 8px;
+  font-family: $fontMontS;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  color: $black2;
+}
+
+.separator {
+  display: inline-block;
+  padding: 0 18px;
+}
+
+.button {
+  flex: 0 0 100px;
+  max-width: 100px;
+  display: block;
+  cursor: pointer;
+  padding: 7px;
+  text-align: center;
+  font-family: $fontMontS;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  color: $white;
+  text-transform: uppercase;
+  background-color: $blue;
+  border: 2px solid $blue;
+  box-shadow: none;
+  transition: $transition;
+
+  @media screen and (min-width: $pointDesktop) {
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+}

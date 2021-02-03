@@ -1,0 +1,111 @@
+@import "styles/support/variables";
+
+.container {
+  position: relative;
+  max-width: 100%;
+}
+
+.button {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  width: 100%;
+  padding: 11px 30px 11px 15px;
+  border: 1px solid $gray2;
+  background-color: $white;
+  text-align: left;
+  font-size: 0;
+  line-height: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  .label {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    max-width: 100%;
+    overflow: hidden;
+    font-family: $fontRaleW;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: normal;
+    color: $black1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .icon {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%) scale(1, 1);
+  }
+
+  &.opened {
+    border-color: $gray6;
+
+    .icon {
+      transform: translateY(-50%) scale(1, -1);
+    }
+  }
+}
+
+.list {
+  display: none;
+  list-style: none;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  border: 1px solid $gray2;
+  border-top-width: 0;
+  transition: $transition;
+
+  &.opened {
+    display: block;
+    border-color: $gray6;
+  }
+}
+
+.item {
+  display: block;
+  cursor: pointer;
+  max-width: 100%;
+  padding: 12px 15px;
+  font-family: $fontRaleW;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+  color: $black1;
+  background-color: $white;
+
+  &.active {
+    background-color: $gray2;
+  }
+
+  @media screen and (min-width: $pointDesktop) {
+    &:hover {
+      background-color: $gray1;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}

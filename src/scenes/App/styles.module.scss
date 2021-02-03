@@ -1,0 +1,110 @@
+@import "styles/support/variables";
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 50px 15px 80px 15px;
+
+  @media screen and (min-width: $pointTablet) {
+    flex-wrap: nowrap;
+  }
+}
+
+.sidebar {
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin-right: 0;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $pointTablet) {
+    flex: 0 0 240px;
+    max-width: 240px;
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  flex: 1 1 100%;
+  max-width: 100%;
+
+  @media screen and (min-width: $pointTablet) {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+}
+
+.title {
+  font-family: $fontMontS;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $black2;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.row {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $pointTablet) {
+    margin-bottom: 60px;
+  }
+}
+
+.list {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  list-style: none;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: inherit;
+  width: auto;
+  margin-bottom: 17px;
+  margin-right: 17px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: $pointTablet) {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 17px;
+    margin-right: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
+
+  @media screen and (min-width: $pointTablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: $pointDesktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  max-width: 100%;
+}

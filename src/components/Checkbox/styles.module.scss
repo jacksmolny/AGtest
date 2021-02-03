@@ -1,0 +1,85 @@
+@import "styles/support/variables";
+
+.container {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+
+  &:checked + .field:before {
+    border-color: $blue;
+  }
+
+  &:checked + .field:after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.field {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+
+  &:before,
+  &:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+  }
+
+  &:before {
+    width: 18px;
+    height: 18px;
+    border: 1px solid $gray5;
+    background-color: $white;
+    margin-right: 9px;
+  }
+
+  &:after {
+    content: url("../../assets/icons/checked.svg");
+    opacity: 0;
+    visibility: hidden;
+    width: 10px;
+    height: 8px;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.label {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: $fontRaleW;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+  color: $black1;
+}
+
+.count {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: $fontOpenS;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+  color: $gray6;
+  font-style: normal;
+  margin-left: 8px;
+}

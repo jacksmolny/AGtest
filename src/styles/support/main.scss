@@ -1,0 +1,14 @@
+@import "styles/support/variables";
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  background-color: $gray2;
+  font-family: $fontMontS;
+  font-weight: normal;
+  font-style: normal;
+
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+}

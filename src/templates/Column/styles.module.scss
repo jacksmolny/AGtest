@@ -1,0 +1,21 @@
+@import "styles/support/variables";
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.header,
+.footer {
+  flex: 0 0 30px;
+  max-width: 100%;
+}
+
+.main {
+  background-color: $white;
+  flex: 1 1 auto;
+  max-width: 100%;
+}

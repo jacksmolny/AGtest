@@ -1,0 +1,99 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "mobx": "^6.1.0",
+    "mobx-react-lite": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "rc-slider": "^9.7.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "sass": "^1.32.5",
+    "styled-jsx": "^3.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx": "^0.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unicorn": "^27.0.0",
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "airbnb",
+      "prettier"
+    ],
+    "plugins": [
+      "import",
+      "jsx",
+      "jsx-a11y",
+      "prettier",
+      "react",
+      "react-hooks",
+      "unicorn"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "quotes": "off",
+      "react/jsx-filename-extension": [
+        "off",
+        {
+          "extensions": [
+            ".js"
+          ]
+        }
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ],
+      "import/extensions": [
+        "off",
+        {
+          "js": "never",
+          "json": "never",
+          "scss": "always"
+        }
+      ],
+      "import/prefer-default-export": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-props-no-spreading": "off",
+      "import/no-unresolved": "off",
+      "jsx-a11y/label-has-associated-control": [
+        "warn",
+        {
+          "required": {
+            "every": [
+              "id"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      "cover 99.5%"
+    ],
+    "development": [
+      "last 2 chrome version"
+    ]
+  }
+}

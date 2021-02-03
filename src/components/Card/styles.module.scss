@@ -1,0 +1,153 @@
+@import "styles/support/variables";
+
+.container {
+  max-width: 100%;
+}
+
+.link {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  text-decoration: none;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+
+  @media screen and (min-width: $pointDesktop) {
+    &:hover {
+      box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+
+      & .thumbnail {
+        &::before {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 240px;
+  max-width: 100%;
+  padding: 20px;
+  position: relative;
+
+  @media screen and (min-width: $pointTablet) {
+    height: 180px;
+  }
+}
+
+.main {
+  padding: 20px;
+  max-width: 100%;
+  border: 1px solid $gray1;
+  border-top: 0;
+  background-color: $white;
+}
+
+.thumbnail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background: linear-gradient(to top, $black4, 35%, transparent);
+    opacity: 1;
+    visibility: visible;
+    transition: $transition;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgba($blue, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.city {
+  position: relative;
+  z-index: 3;
+  flex: 1 1 100%;
+  max-width: 100%;
+  font-family: $fontRaleW;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $white;
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: $fontMontS;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  color: $black2;
+  margin-bottom: 14px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.category {
+  flex: 1 1 auto;
+  max-width: inherit;
+  font-family: $fontRaleW;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $gray6;
+}
+
+.price {
+  flex: 0 0 auto;
+  max-width: inherit;
+  font-family: $fontMontS;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $black3;
+}
